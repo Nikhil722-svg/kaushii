@@ -1,0 +1,219 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>enter the first value <input type="text" id="first_value"></h1>
+    <h1>enter the second value<input type="text" id="second_value"></h1>
+    <i id="res"></i>
+    <br>
+    <button onclick="result1()">Addition</button>
+    <br>
+
+    <h1>enter the second value<input type="text" id="firts_value"></h1>
+    <h1>enter the second value<input type="text" id="second_value"></h1>
+    <i id="res"></i>
+    <br>
+    <button onclick="result2()">Subtraction</button>
+
+    <h1>enter the second value<input type="text" id="first_value"></h1>
+    <h1>enter the second value<input type="text" id="second_value"></h1>
+    <i id="res"></i>
+    <br>
+    <button onclick="result3()">Multiplication</button>
+
+    <h1>enter the second value<input type="text" id="first_value"></h1>
+    <h1>enter the second value<input type="text" id="second_value"></h1>
+    <i id="res"></i>
+    <br>
+    <button onclick="result4()">Division</button>
+</body>
+<script>
+    function result1() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x + y;
+        console.log(sum);
+    }
+    function result2() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x - y;
+        console.log(sum);
+    }
+    function result3() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x * y;
+        console.log(sum);
+    }
+    function result4() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x / y;
+        console.log(sum);
+    }
+
+
+</script>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add {
+            width: 100px;
+            height: 50px;
+            font-size: 40px;
+            background-color: bisque;
+            border: none;
+            border-radius: 5px;
+            margin-left: 26pc;
+        }
+
+        .sub {
+            width: 100px;
+            height: 50px;
+            margin-left: 1pc;
+            font-size: 40px;
+            background-color: bisque;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .mul {
+            width: 100px;
+            height: 50px;
+            margin-left: 1pc;
+            font-size: 40px;
+            background-color: bisque;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .div {
+            width: 100px;
+            height: 50px;
+            margin-left: 1pc;
+            font-size: 40px;
+            background-color: bisque;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .h1 {
+            font-weight: 100;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #first-value {
+            width: 100px;
+            border-radius: 10px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1">enter the second value<input type="text" id="first_value"></h1>
+    <h1 class="h1">enter the second value<input type="text" id="second_value"></h1>
+    <div style="display: flex; margin-left: 2pc;">
+        <br>
+        <button onclick="add()" class="add">+</button>
+        <br>
+        <button onclick="sub()" class="sub">-</button>
+        <br>
+        <button onclick="mul()" class="mul">x</button>
+        <br>
+        <button onclick="div()" class="div">/</button>
+        <br>
+    </div>
+    <h1>Result <i id="res"></i></h1>
+    <h2>Enter the measurement<input type="text" id="third-value">cm</h2>
+    <button onclick="measure()">Fetch</button>
+    <i id="res1"></i>
+    <input type="text" name="first" id="first" step="any" />
+    <select id="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+
+    </select>
+    <input type="text" name="second" id="second" step="any" />
+    <br />
+    <button onclick="calculator()">Calculate</button>
+    <br />
+    <input type="text" name="" id="result" readonly="" />
+</body>
+<script>
+    function add() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x + y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function sub() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x - y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function mul() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x * y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function div() {
+        var x = parseInt(document.getElementById("first_value").value);
+        var y = parseInt(document.getElementById("second_value").value);
+        var sum = x / y;
+        document.getElementById("res").innerHTML = sum;
+    }
+    function measure() {
+        var x = parseInt(document.getElementById("third-value").value);
+        var y = x / 100;
+        document.getElementById("res1").innerHTML = y;
+    }
+
+    function calculator() {
+        var x = document.getElementById('first').value;
+        var y = document.getElementById('second').value;
+        var z = document.getElementById('operators').value;
+        if (z == '+') {
+            result = parseInt(x) + parseInt(y);
+
+        }
+        if (z == '-') {
+            result = parseInt(x) - parseInt(y);
+
+        }
+        if (z == '*') {
+            result = parseInt(x) * parseInt(y);
+
+        }
+        if (z == '/') {
+            result = parseInt(x) / parseInt(y);
+
+        }
+        document.getElementById('result').value = result;
+
+
+    }
+</script>
+
+</html>
